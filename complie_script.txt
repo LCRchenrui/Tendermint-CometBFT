@@ -1,0 +1,18 @@
+wfService, wfEngine和activiti-engine都需要使用java 11（可以用sdk命令切换java版本,sdkman，具体见java多版本管理, sdk use java 11）
+
+wfService：
+mvn clean package
+
+wfEngine：
+mvn clean package
+
+activiti-engine:
+mvn install -DskipTests
+
+fabric-sdk-java-1.4.12
+mvn install -Dcheckstyle.skip=true -DskipTests
+
+nacos:
+Mvn -Prelease-nacos -DskipTests clean install -U
+
+
