@@ -22,7 +22,6 @@ import com.alibaba.nacos.api.common.Constants;
 import com.alibaba.nacos.naming.consistency.ApplyAction;
 import com.alibaba.nacos.naming.consistency.Datum;
 import com.alibaba.nacos.naming.consistency.KeyBuilder;
-import com.alibaba.nacos.naming.consistency.persistent.blockchain.fabric.FabricCrudBySdk;
 import com.alibaba.nacos.naming.core.Instance;
 import com.alibaba.nacos.naming.core.Instances;
 import com.alibaba.nacos.naming.core.Service;
@@ -55,7 +54,7 @@ public class BlockchainStore {
     private String cacheDir = UtilsAndCommons.DATA_BASE_DIR + File.separator + "data";
 
     @Autowired
-    private FabricCrudBySdk fabricCrud;
+    private BlockchainCrud blockchainCrud;
 
 
     public synchronized void loadDatums(BlockchainCore.Notifier notifier, ConcurrentMap<String, Datum> datums) throws Exception {
@@ -81,7 +80,7 @@ public class BlockchainStore {
         long start = System.currentTimeMillis();
         // load data
         Loggers.RAFT.info("load key is" + key);
-        String data = fabricCrud.fabricQueryByKey(key);
+        String data = blockchainCrud.fabricQueryByKey(key);
         Loggers.RAFT.info("load data is " + data);
         Loggers.RAFT.info("finish loading datum, key: {} cost {} ms.",
                 key, (System.currentTimeMillis() - start));
@@ -257,7 +256,7 @@ public class BlockchainStore {
             String key = encodeFileName(datum.key);
             dataPre = ByteBuffer.wrap(JSON.toJSONString(datum).getBytes(StandardCharsets.UTF_8));
             String data = new String(dataPre.array(), StandardCharsets.UTF_8);
-            Loggers.RAFT.info(fabricCrud.fabricPut(key, data));
+            Loggers.RAFT.info(blockchainCrud.fabricPut(key, data));
         } catch (Exception e) {
             Loggers.RAFT.error("write failed" + datum.key);
             throw e;
@@ -265,7 +264,7 @@ public class BlockchainStore {
     }
 
     private String[] listCaches() throws Exception {
-        String str = fabricCrud.fabricQueryAllNamingData();
+        String str = blockchainCrud.fabricQueryAllNamingData();
         String res = str.replaceAll("^(\\[)", "");
         res = res.replaceAll("(\\])$", "");
         String[] s = res.split("(?<=}),(?=\\{\"Key\":\"com\\.alibaba\\.nacos\\.naming)");
@@ -275,7 +274,7 @@ public class BlockchainStore {
     public void delete(String key) throws Exception {
         // datum key contains namespace info:
         key = encodeFileName(key);
-        Loggers.RAFT.info(fabricCrud.fabricDelete(key));
+        Loggers.RAFT.info(blockchainCrud.fabricDelete(key));
     }
 
     private static String encodeFileName(String fileName) {

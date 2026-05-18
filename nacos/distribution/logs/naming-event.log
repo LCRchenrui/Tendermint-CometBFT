@@ -1,0 +1,70 @@
+2026-05-11 00:07:55,121 INFO Service2024@@generateOrder {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [127.0.0.1:9999:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2026-05-11 00:07:55,123 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:07:56,164 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:07:56,515 INFO serviceName: Service2024@@generateOrder {OTHER} {IP-ENABLED} pre-valid: 127.0.0.1:9999@DEFAULT in 1, msg: tcp:ok+
+
+2026-05-11 00:07:57,210 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:07:58,254 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:07:58,633 INFO serviceName: Service2024@@generateOrder {OTHER} {IP-ENABLED} pre-valid: 127.0.0.1:9999@DEFAULT in 2, msg: tcp:ok+
+
+2026-05-11 00:07:59,301 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:08:00,222 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 00:08:00,348 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:08:01,414 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 00:49:11,018 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:49:11,640 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 00:49:12,061 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:49:12,640 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 00:49:13,105 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:49:13,640 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 00:49:14,147 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:49:14,640 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 00:49:15,194 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:49:15,640 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 00:49:16,239 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 00:49:16,640 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 01:04:25,969 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 01:04:26,718 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 01:04:27,008 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 01:04:27,718 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 01:04:28,050 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 01:04:28,718 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 01:04:29,095 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 01:04:29,718 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 01:04:30,138 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 01:04:30,719 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+
+2026-05-11 01:04:31,192 INFO [IP-UPDATED] namespace: public, service: Service2024@@generateOrder, ips: 127.0.0.1:9999_true,
+
+2026-05-11 01:04:31,719 INFO serviceName: Service2024@@generateOrder {POS} {IP-ENABLED} valid: 127.0.0.1:9999@DEFAULT, region: unknown, msg: tcp:ok+
+

@@ -170,7 +170,7 @@ func decodeInstanceList(body []byte) ([]Instance, error) {
 		Hosts []Instance `json:"hosts"`
 	}
 	var outV1 v1Resp
-	if err := json.Unmarshal(body, &outV1); err == nil {
+	if err := json.Unmarshal(body, &outV1); err == nil && len(outV1.Hosts) > 0 {
 		return outV1.Hosts, nil
 	}
 

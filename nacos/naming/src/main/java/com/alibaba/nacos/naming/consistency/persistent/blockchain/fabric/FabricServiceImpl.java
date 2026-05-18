@@ -36,7 +36,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
  * @date: 2021/1/3 9:14 下午
  */
 @Slf4j
-@Service
+// @Service removed — Fabric not needed, replaced by TendermintCrudByHttp
 public class FabricServiceImpl implements FabricService {
 
     //设置加密方式

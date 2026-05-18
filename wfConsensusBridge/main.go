@@ -33,11 +33,20 @@ func main() {
 
 	// 组装核心对象
 	core := app.New()            // 创建状态机核心（交易验证、提案校验、状态管理）
+	// 执行器：持有wfBase，在ABCI的PrepareProposal里预执行wfEngine，在FinalizeBlock里最终执行（并可按需flush）
 	exec := executor.New(wfBase) // 创建执行器（负责 proposer 预执行和最终回放）
+	// 封装对Nacos OpenAPI的封装，提供注册、注销、查询实例列表等操作
 	nacosClient := nacos.NewClient(nacosBase, nacosNamespace, &http.Client{Timeout: 10 * time.Second})
+	// 网关：持有nacosClient，负责把wfEngine发来的请求转成对Nacos或内部转发逻辑的调用
 	gw := gateway.New(nacosClient, nacosDefaultGroup, &http.Client{Timeout: 20 * time.Second})
 
+
+
 	// 启动ABCI服务，监听ABCI socket地址，接收 CometBFT ABCI++ 请求
+	/* wfConsensusBridge在本地监听一个ABCI地址，CometBFT节点通过proxy_app去连接这个地址
+	CometBFT节点通过proxy_app去连接这个地址
+	然后CometBFT会把CheckTx / PrepareProposal / ProcessProposal / FinalizeBlock / Commit 这些调用发到这里
+	*/
 	s := abciserver.NewSocketServer(abciAddr, abciapp.New(core, exec))
 	s.SetLogger(tmlog.NewTMLogger(tmlog.NewSyncWriter(os.Stdout)))
 	if err := s.Start(); err != nil {

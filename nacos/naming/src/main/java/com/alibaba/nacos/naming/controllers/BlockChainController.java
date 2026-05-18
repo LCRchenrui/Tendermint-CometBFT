@@ -159,12 +159,12 @@ public class BlockChainController {
 
     @PostMapping("/loadAllDatums")
     public String loadAllDatumsFromBlockchain() throws Exception {
-        return blockchainCore.fabricCrud.fabricQueryAllNamingData();
+        return blockchainCore.blockchainCrud.fabricQueryAllNamingData();
     }
 
     @PostMapping("/loadDatum")
     public String loadDatumFromBlockchain(@RequestParam(value = "key", required = true) String key) throws Exception {
-        return blockchainCore.fabricCrud.fabricQueryByKey(key);
+        return blockchainCore.blockchainCrud.fabricQueryByKey(key);
     }
 
     @GetMapping("/state")

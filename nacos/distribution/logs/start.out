@@ -1,2 +1,106 @@
-/Users/dreamingworld/.sdkman/candidates/java/8/bin/java  -server -Xms1g -Xmx1g -Xmn512m -XX:MetaspaceSize=512m -XX:MaxMetaspaceSize=512m -XX:-OmitStackTraceInFastThrow -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/logs/java_heapdump.hprof -XX:-UseLargePages -Djava.ext.dirs=/Users/dreamingworld/.sdkman/candidates/java/8/jre/lib/ext:/Users/dreamingworld/.sdkman/candidates/java/8/lib/ext -Xloggc:/Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/logs/nacos_gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M -Dloader.path=/Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/plugins/health,/Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/plugins/cmdb,/Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/plugins/mysql -Dnacos.home=/Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution -jar /Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/target/nacos-server.jar  --spring.config.location=classpath:/,classpath:/config/,file:./,file:./config/,file:/Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/conf/ --logging.config=/Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/conf/nacos-logback.xml --server.max-http-header-size=524288
-Error: Unable to access jarfile /Users/dreamingworld/Fabric/workflow-engine-crypto/volumes/codes/nacos/distribution/target/nacos-server.jar
+/home/lichenrui/.sdkman/candidates/java/current/bin/java  -Xms512m -Xmx512m -Xmn256m -Dnacos.standalone=true -Xlog:gc*:file=/home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/logs/nacos_gc.log:time,tags:filecount=10,filesize=102400 -Dloader.path=/home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/plugins/health,/home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/plugins/cmdb,/home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/plugins/mysql -Dnacos.home=/home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution -jar /home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/target/nacos-server.jar  --spring.config.location=classpath:/,classpath:/config/,file:./,file:./config/,file:/home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/conf/ --logging.config=/home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/conf/nacos-logback.xml --server.max-http-header-size=524288
+
+         ,--.
+       ,--.'|
+   ,--,:  : |                                           Nacos 1.2.0-SNAPSHOT
+,`--.'`|  ' :                       ,---.               Running in stand alone mode, All function modules
+|   :  :  | |                      '   ,'\   .--.--.    Port: 8848
+:   |   \ | :  ,--.--.     ,---.  /   /   | /  /    '   Pid: 1171500
+|   : '  '; | /       \   /     \.   ; ,. :|  :  /`./   Console: http://10.47.134.236:8848/nacos/index.html
+'   ' ;.    ;.--.  .-. | /    / ''   | |: :|  :  ;_
+|   | | \   | \__\/: . ..    ' / '   | .; : \  \    `.      https://nacos.io
+'   : |  ; .' ," .--.; |'   ; :__|   :    |  `----.   \
+|   | '`--'  /  /  ,.  |'   | '.'|\   \  /  /  /`--'  /
+'   : |     ;  :   .'   \   :    : `----'  '--'.     /
+;   |.'     |  ,     .-./\   \  /            `--'---'
+'---'        `--`---'     `----'
+
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.reflection.CachedClass$3$1 (jar:file:/tmp/nacos_server_fixed.jar!/BOOT-INF/lib/groovy-all-2.4.7.jar!/) to method java.lang.Object.finalize()
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.reflection.CachedClass$3$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2026-05-10 23:10:15,218 INFO Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$fbc63b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2026-05-10 23:10:15,253 INFO Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2026-05-10 23:10:15,254 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@143d9a93' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2026-05-10 23:10:15,256 INFO Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$34910664] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2026-05-10 23:10:15,258 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2026-05-10 23:10:15,456 INFO Tomcat initialized with port(s): 8848 (http)
+
+2026-05-10 23:10:15,522 INFO Root WebApplicationContext: initialization completed in 1135 ms
+
+2026-05-10 23:10:18,086 INFO Autowired annotation is not supported on static methods: public static void com.alibaba.nacos.naming.consistency.persistent.blockchain.fabric.RegisterChannelConfig.setPeerTlsPath(java.lang.String)
+
+2026-05-10 23:10:18,087 INFO Autowired annotation is not supported on static methods: public static void com.alibaba.nacos.naming.consistency.persistent.blockchain.fabric.RegisterChannelConfig.setPeerName(java.lang.String)
+
+2026-05-10 23:10:18,087 INFO Autowired annotation is not supported on static methods: public static void com.alibaba.nacos.naming.consistency.persistent.blockchain.fabric.RegisterChannelConfig.setPeerAddr(java.lang.String)
+
+2026-05-10 23:10:18,087 INFO Autowired annotation is not supported on static methods: public static void com.alibaba.nacos.naming.consistency.persistent.blockchain.fabric.RegisterChannelConfig.setOrdererTlsPath(java.lang.String)
+
+2026-05-10 23:10:18,087 INFO Autowired annotation is not supported on static methods: public static void com.alibaba.nacos.naming.consistency.persistent.blockchain.fabric.RegisterChannelConfig.setOrdererName(java.lang.String)
+
+2026-05-10 23:10:18,087 INFO Autowired annotation is not supported on static methods: public static void com.alibaba.nacos.naming.consistency.persistent.blockchain.fabric.RegisterChannelConfig.setOrdererAddr(java.lang.String)
+
+2026-05-10 23:10:18,196 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2026-05-10 23:10:18,274 INFO Adding welcome page: class path resource [static/index.html]
+
+2026-05-10 23:10:18,398 INFO Creating filter chain: Ant [pattern='/'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/error'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/**/*.css'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/**/*.js'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/**/*.html'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/**/*.map'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/**/*.svg'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/**/*.png'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/**/*.ico'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/console-fe/public/**'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/v1/auth/login'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/v1/console/health/**'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/v1/cs/**'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/v1/ns/**'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/v1/cmdb/**'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/actuator/**'], []
+
+2026-05-10 23:10:18,399 INFO Creating filter chain: Ant [pattern='/v1/console/server/**'], []
+
+2026-05-10 23:10:18,410 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16d07cf3, org.springframework.security.web.context.SecurityContextPersistenceFilter@5921b93c, org.springframework.security.web.header.HeaderWriterFilter@2ed9f6f8, org.springframework.web.filter.CorsFilter@a518813, org.springframework.security.web.authentication.logout.LogoutFilter@656a3d6b, com.alibaba.nacos.console.filter.JwtAuthenticationTokenFilter@16f0ec18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19b02dfd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@b4732dc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c977dcf, org.springframework.security.web.session.SessionManagementFilter@420a8042, org.springframework.security.web.access.ExceptionTranslationFilter@24c685e7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@525b1b70]
+
+2026-05-10 23:10:18,551 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2026-05-10 23:10:18,563 INFO Initializing ExecutorService 'taskScheduler'
+
+2026-05-10 23:10:18,606 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2026-05-10 23:10:18,608 INFO Nacos Log files: /home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/logs/
+
+2026-05-10 23:10:18,608 INFO Nacos Conf files: /home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/conf/
+
+2026-05-10 23:10:18,608 INFO Nacos Data files: /home/lichenrui/workflow-time/workflow/volumes/codes/nacos/distribution/data/
+
+2026-05-10 23:10:18,608 INFO Nacos started successfully in stand alone mode.
+
+2026-05-10 23:10:22,956 INFO Initializing Servlet 'dispatcherServlet'
+
+2026-05-10 23:10:22,960 INFO Completed initialization in 4 ms
+

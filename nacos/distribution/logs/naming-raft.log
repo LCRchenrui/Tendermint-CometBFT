@@ -1,0 +1,252 @@
+2026-05-11 00:07:55,118 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"94ED005265E5EB84D17B963E09D0975078D639A3B327EB0D7F688608CFE03AD6","height":"1137"}}
+
+2026-05-11 00:07:55,118 INFO ok
+
+2026-05-11 00:07:55,119 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:55,121 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@77c8214c
+
+2026-05-11 00:07:55,121 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:55,121 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778429274053,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:07:55,122 INFO signalPublish cost 1069 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:56,164 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"34B6845CCC0DF062C9A8D367BC2454978D4E92393A55AE3465D2E8CD2661CD97","height":"1138"}}
+
+2026-05-11 00:07:56,164 INFO ok
+
+2026-05-11 00:07:56,164 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:56,164 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@608e57e5
+
+2026-05-11 00:07:56,164 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:56,164 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778429275128,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:07:56,164 INFO signalPublish cost 1036 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:57,210 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"CE9C44997DAE5190AA14EE5D97E667332F4EB9879336B82E213AB544D8558B9D","height":"1139"}}
+
+2026-05-11 00:07:57,210 INFO ok
+
+2026-05-11 00:07:57,210 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:57,210 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@39f5f72
+
+2026-05-11 00:07:57,210 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:57,210 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778429276169,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:07:57,210 INFO signalPublish cost 1041 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:58,254 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"2511C563A25FC6B3DFAF59A8B2FF81581EBF76EAF2B70A37E7D6A09A0EC58B27","height":"1140"}}
+
+2026-05-11 00:07:58,254 INFO ok
+
+2026-05-11 00:07:58,254 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:58,254 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@33397ce8
+
+2026-05-11 00:07:58,254 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:58,254 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778429277216,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:07:58,254 INFO signalPublish cost 1038 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:59,301 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"FA44ACE43290D94831CEDA7CB40EB44E32DBE5B81A2BA5A0079180F155FD1C60","height":"1141"}}
+
+2026-05-11 00:07:59,301 INFO ok
+
+2026-05-11 00:07:59,301 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:59,301 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@5f1b198c
+
+2026-05-11 00:07:59,301 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:07:59,301 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778429278259,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:07:59,301 INFO signalPublish cost 1041 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:08:00,348 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"0CB3E45F48C0F5BE9BF7A8138AE0D55CBD549400B383D75C240678E12F1E703D","height":"1142"}}
+
+2026-05-11 00:08:00,348 INFO ok
+
+2026-05-11 00:08:00,348 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:08:00,348 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@3d539d8f
+
+2026-05-11 00:08:00,348 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:08:00,348 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778429279306,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:08:00,348 INFO signalPublish cost 1042 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:11,017 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"2F02229A76DFEDFEB97781A9FE676D965E48BF3D60FD36A0F5FB861955B96C68","height":"76"}}
+
+2026-05-11 00:49:11,017 INFO ok
+
+2026-05-11 00:49:11,017 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:11,017 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@1e680f0e
+
+2026-05-11 00:49:11,017 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:11,017 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778431750567,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:49:11,017 INFO signalPublish cost 449 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:12,061 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"AC0611735FA58A751A49B9B13CBA1BB022E41AEBA9317EFA2B2804651EDA7FB6","height":"77"}}
+
+2026-05-11 00:49:12,061 INFO ok
+
+2026-05-11 00:49:12,061 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:12,061 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@34713c6e
+
+2026-05-11 00:49:12,061 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:12,061 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778431751023,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:49:12,061 INFO signalPublish cost 1038 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:13,105 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"5C1D3BA37C089D90B1E2BC34496F6D7CFCCD6D160D38680BC18EF8EE7D010FA0","height":"78"}}
+
+2026-05-11 00:49:13,105 INFO ok
+
+2026-05-11 00:49:13,105 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:13,105 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@1ca7b52
+
+2026-05-11 00:49:13,105 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:13,105 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778431752067,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:49:13,105 INFO signalPublish cost 1038 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:14,147 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"42D0EBB8F12624E9C38F2C3E6F8E728643DACFD265C8868CE62E276EDC6CC083","height":"79"}}
+
+2026-05-11 00:49:14,147 INFO ok
+
+2026-05-11 00:49:14,147 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:14,147 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@68669dc1
+
+2026-05-11 00:49:14,147 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:14,147 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778431753110,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:49:14,147 INFO signalPublish cost 1037 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:15,194 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"280E9A1B64100F8430C3C49A95A395F33D4CE21026E23E3131E4E321C05DDFDA","height":"80"}}
+
+2026-05-11 00:49:15,194 INFO ok
+
+2026-05-11 00:49:15,194 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:15,194 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@c3417a
+
+2026-05-11 00:49:15,194 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:15,194 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778431754152,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:49:15,194 INFO signalPublish cost 1042 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:16,239 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"BE0FB91B26C39AB4196E90D6E4A267E581753154AF8A6822DE291BD2A6B8D721","height":"81"}}
+
+2026-05-11 00:49:16,239 INFO ok
+
+2026-05-11 00:49:16,239 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:16,239 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@560049d0
+
+2026-05-11 00:49:16,239 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 00:49:16,239 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778431755200,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 00:49:16,239 INFO signalPublish cost 1039 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:25,969 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"23EFE715B73C825FB5EF5338C3503248DCE36B80F59F7F78DAD126ED984CE719","height":"948"}}
+
+2026-05-11 01:04:25,969 INFO ok
+
+2026-05-11 01:04:25,969 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:25,969 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@23a62fa1
+
+2026-05-11 01:04:25,969 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:25,969 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778432665270,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 01:04:25,969 INFO signalPublish cost 699 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:27,008 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"5D6FD7DFFFEA88732B9B1C337961020100C19B259D87CD6C020F901EC45E5A44","height":"949"}}
+
+2026-05-11 01:04:27,008 INFO ok
+
+2026-05-11 01:04:27,008 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:27,008 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@5b4176a2
+
+2026-05-11 01:04:27,008 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:27,008 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778432665975,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 01:04:27,008 INFO signalPublish cost 1033 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:28,050 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"DCCF5F1FB7F5CD95BD1CE3926095ABB304BEF6FF7E582FDE7D10B07AEFAEC1AD","height":"950"}}
+
+2026-05-11 01:04:28,050 INFO ok
+
+2026-05-11 01:04:28,050 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:28,050 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@2a573609
+
+2026-05-11 01:04:28,050 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:28,050 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778432667014,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 01:04:28,050 INFO signalPublish cost 1036 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:29,095 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"E1EA17DA9B60C79AA6677DCBCF50334997BAFEE59B18490F3A2261248FE0DE1F","height":"951"}}
+
+2026-05-11 01:04:29,095 INFO ok
+
+2026-05-11 01:04:29,095 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:29,095 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@4b653940
+
+2026-05-11 01:04:29,095 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:29,095 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778432668056,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 01:04:29,095 INFO signalPublish cost 1039 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:30,138 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"FFD35099C3277224670B6D1FB0E635BA65F13FAFFF3CA48100F9012641FB2B77","height":"952"}}
+
+2026-05-11 01:04:30,138 INFO ok
+
+2026-05-11 01:04:30,138 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:30,138 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@290494d6
+
+2026-05-11 01:04:30,138 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:30,138 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778432669100,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 01:04:30,138 INFO signalPublish cost 1038 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:31,192 INFO tendermint rpc broadcast_tx_commit response: {"jsonrpc":"2.0","id":"nacos","result":{"check_tx":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"tx_result":{"code":0,"data":null,"log":"ok","info":"","gas_wanted":"0","gas_used":"0","events":[],"codespace":""},"hash":"A36F7A87601E1A743CD2401B1ACEA48E5A706CB69FFC614D0017F870A5351A51","height":"953"}}
+
+2026-05-11 01:04:31,192 INFO ok
+
+2026-05-11 01:04:31,192 INFO add task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:31,192 INFO onPublish datumscom.alibaba.nacos.naming.consistency.Datum@2e74f9ef
+
+2026-05-11 01:04:31,192 INFO remove task com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+
+2026-05-11 01:04:31,192 INFO data Publish added/updated, key=com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder, term={"instanceList":[{"app":"DEFAULT","clusterName":"DEFAULT","enabled":true,"ephemeral":false,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceId":"127.0.0.1#9999#DEFAULT#Service2024@@generateOrder","instanceIdGenerator":"simple","ip":"127.0.0.1","ipDeleteTimeout":30000,"lastBeat":1778432670144,"marked":false,"metadata":{},"port":9999,"serviceName":"Service2024@@generateOrder","tenant":"","weight":1.0}]}
+
+2026-05-11 01:04:31,192 INFO signalPublish cost 1048 ms, key: com.alibaba.nacos.naming.iplist.public##Service2024@@generateOrder
+

@@ -6,9 +6,11 @@ type CommandType string
 
 // 定义了三种交易类型
 const (
-	CommandDeploy   CommandType = "deploy"
-	CommandInstance CommandType = "instance"
-	CommandComplete CommandType = "complete"
+	CommandDeploy      CommandType = "deploy"
+	CommandInstance    CommandType = "instance"
+	CommandComplete    CommandType = "complete"
+	CommandNacosPut    CommandType = "nacos_put"
+	CommandNacosDelete CommandType = "nacos_delete"
 )
 
 type Tx struct {
@@ -29,6 +31,8 @@ type Payload struct {
 	User              string `json:"user,omitempty"`
 	ServiceTaskResult string `json:"serviceTaskResultJson,omitempty"`
 	StaticAllocation  string `json:"staticAllocationTable,omitempty"`
+	Key               string `json:"key,omitempty"`
+	Value             string `json:"value,omitempty"`
 }
 
 type ExecutionEnvelope struct {
@@ -65,5 +69,6 @@ type CommandRecord struct {
 type AppState struct {
 	Height   int64                    `json:"height"`
 	Commands map[string]CommandRecord `json:"commands"`
+	NacosKV  map[string]string        `json:"nacosKv,omitempty"`
 	AppHash  string                   `json:"appHash,omitempty"`
 }

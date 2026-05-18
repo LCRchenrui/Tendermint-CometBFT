@@ -2,15 +2,19 @@ module wfconsensusbridge
 
 go 1.22.11
 
+toolchain go1.24.4
+
 require github.com/cometbft/cometbft v0.38.17
 
 replace github.com/cometbft/cometbft => ../cometbft
 
 require (
+	github.com/btcsuite/btcd v0.22.1 // indirect
 	github.com/cosmos/gogoproto v1.7.0 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.3.0 // indirect
 	github.com/go-kit/log v0.2.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
+	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/oasisprotocol/curve25519-voi v0.0.0-20220708102147-0a8a51822cae // indirect

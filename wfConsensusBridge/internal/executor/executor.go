@@ -29,7 +29,9 @@ func New(wfEngineBase string) *Executor {
 	}
 }
 
+// 在交易被写进正式提案之前，先调一次wfEngine做预执行，把执行结果封进交易本身，这样其他节点在ProcessProposal里能校验、在FinalizeBlock里能按同一套数据再执行/回放
 func (e *Executor) PrepareTx(ctx context.Context, tx model.Tx, height int64) (model.Tx, error) {
+	// 按交易类型发 HTTP 到 wfEngine（deploy / instance / complete），第三个参数 true 表示要 解析 wfEngine 返回的共识载荷（WorkflowConsensus 等），失败则原样返回 tx 和 err（注意：这里仍返回原 tx，但带 error，上层 PrepareProposal 里会 continue 丢掉这笔）。
 	result, err := e.execute(ctx, tx, true)
 	if err != nil {
 		return tx, err
@@ -59,6 +61,7 @@ func (e *Executor) FinalizeTx(ctx context.Context, tx model.Tx) (model.WorkflowC
 	return result, nil
 }
 
+// 根据交易类型，把统一的共识交易tx翻译成对应的wfEngine HTTP请求并发送
 func (e *Executor) execute(ctx context.Context, tx model.Tx, consensusPayload bool) (model.WorkflowConsensus, error) {
 	var (
 		raw string

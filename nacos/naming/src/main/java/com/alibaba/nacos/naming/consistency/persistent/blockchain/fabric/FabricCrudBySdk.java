@@ -5,9 +5,6 @@ import com.alibaba.nacos.naming.misc.Loggers;
 import org.hyperledger.fabric.sdk.ProposalResponse;
 import org.hyperledger.fabric.sdk.exception.CryptoException;
 import org.hyperledger.fabric.sdk.exception.InvalidArgumentException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -22,13 +19,12 @@ import java.util.Collection;
  * @author: 李浩然
  * @date: 2021/1/3 9:14 下午
  */
-@Component
+// @Component removed — replaced by TendermintCrudByHttp (@Primary)
 public class FabricCrudBySdk implements BlockchainCrud {
     static {
         Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
     }
 
-    @Autowired
     private FabricServiceImpl fabricService = new FabricServiceImpl();
     String txFilePath = "/channelTxs/";
     String channelStringPath = "/channelString/";

@@ -22,7 +22,6 @@ import com.alibaba.nacos.naming.consistency.ApplyAction;
 import com.alibaba.nacos.naming.consistency.Datum;
 import com.alibaba.nacos.naming.consistency.KeyBuilder;
 import com.alibaba.nacos.naming.consistency.RecordListener;
-import com.alibaba.nacos.naming.consistency.persistent.blockchain.fabric.FabricCrudBySdk;
 import com.alibaba.nacos.naming.misc.*;
 import com.alibaba.nacos.naming.pojo.Record;
 import com.ning.http.client.AsyncCompletionHandler;
@@ -36,7 +35,6 @@ import javax.annotation.PostConstruct;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URLDecoder;
-import java.security.InvalidKeyException;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
@@ -85,19 +83,23 @@ public class BlockchainCore {
 
     @Autowired
 
-    public FabricCrudBySdk fabricCrud;
+    public BlockchainCrud blockchainCrud;
 
+
+    // 这是Spring里带@PostConstruct注解的初始化方法：在BlockchainCore注入完成后执行，用来启动异步通知线程、从本地磁盘把Datum装进内存、等通知队列处理完，再把initialized标记为true
     @PostConstruct
     public void init() throws Exception {
 
         executor.submit(notifier);
-        byte[] sign = fabricCrud.sign("verify");
-        boolean res = fabricCrud.verify(sign, "verify");
-        if (!res) {
-            throw new InvalidKeyException("verify result is false!!!");
-        } else {
-            Loggers.RAFT.info("verify passed");
-        }
+        // 这里注释掉了签名验证，因为签名验证在wfConsensusBridge里已经做了，这里不需要再做
+        //  byte[] sign = fabricCrud.sign("verify");
+        // boolean res = fabricCrud.verify(sign, "verify");
+        // if (!res) {
+        //     throw new InvalidKeyException("verify result is false!!!");
+        // } else {
+        //     Loggers.RAFT.info("verify passed");
+        // }
+        Loggers.RAFT.info("blockchain crud initialized: {}", blockchainCrud.getClass().getName());
         long start = System.currentTimeMillis();
 
         blockchainStore.loadDatums(notifier, datums);
