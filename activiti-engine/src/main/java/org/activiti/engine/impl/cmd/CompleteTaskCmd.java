@@ -54,6 +54,10 @@ public class CompleteTaskCmd extends AbstractCompleteTaskCmd {
       if (variables.containsKey("businessData")) {
         commandContext.setBusinessData(String.valueOf(variables.remove("businessData")));
       }
+      // Activiti 真正执行 complete 命令时，从 variables 里取出 txId，放进 CommandContext。CommandContext可以理解为当前这次流程执行的上下文对象
+      if (variables.containsKey("txId")) {
+        commandContext.setTxId(String.valueOf(variables.remove("txId")));
+      }
       if (variables.containsKey("serviceTaskResultJson")) {
         commandContext.setServiceTaskResults(jsonTransfer.jsonToServiceTaskRes(String.valueOf(variables.remove("serviceTaskResultJson"))));
       }

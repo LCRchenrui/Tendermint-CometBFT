@@ -134,6 +134,34 @@ func (a *Application) RecordFinalized(tx model.Tx, ok bool, result model.Workflo
 	a.state.Commands[tx.TxID] = rec
 }
 
+func (a *Application) RecordMismatched(tx model.Tx, result model.WorkflowConsensus, preparedHash string, finalizedHash string) {
+	a.mu.Lock()
+	defer a.mu.Unlock()
+
+	a.ensureNacosKVLocked()
+
+	rec := a.state.Commands[tx.TxID]
+	rec.Tx = tx
+	rec.ConsensusStatus = "accepted"
+	rec.ExecutionStatus = "mismatched"
+	rec.Result = result
+	rec.ResultBody = consensusDigest(normalizeConsensusResult(tx, result))
+	rec.ResultHash = finalizedHash
+	rec.PreparedResultHash = preparedHash
+	rec.FinalizedResultHash = finalizedHash
+	rec.ErrorMessage = fmt.Sprintf("proposer execution result mismatch: prepared=%s finalized=%s", preparedHash, finalizedHash)
+	a.state.Commands[tx.TxID] = rec
+}
+
+func (a *Application) ExecutionMatches(tx model.Tx, result model.WorkflowConsensus) (bool, string, string) {
+	if tx.Execution == nil {
+		return true, "", consensusHash(normalizeConsensusResult(tx, result))
+	}
+	preparedHash := consensusHash(normalizeConsensusResult(tx, tx.Execution.Result))
+	finalizedHash := consensusHash(normalizeConsensusResult(tx, result))
+	return preparedHash == finalizedHash, preparedHash, finalizedHash
+}
+
 /**
 Java Nacos 通过 Tendermint broadcast_tx_commit 提交 nacos_put / nacos_delete，共识完成后在 abciapp.Application.FinalizeBlock 里分支调用 ApplyNacosTx。
 因此：链上确认的命名数据 = 这里的 NacosKV；abci_query 的 /nacos/key、/nacos/prefix 读的就是这份内存状态（在 Commit 之后 AppHash 也会带上它的摘要）。
@@ -235,7 +263,24 @@ func hashString(value string) string {
 	return hex.EncodeToString(sum[:])
 }
 
+func consensusHash(result model.WorkflowConsensus) string {
+	return hashString(consensusDigest(result))
+}
+
 func consensusDigest(result model.WorkflowConsensus) string {
 	b, _ := json.Marshal(result)
 	return string(b)
+}
+
+func normalizeConsensusResult(tx model.Tx, result model.WorkflowConsensus) model.WorkflowConsensus {
+	if result.OID == "" {
+		result.OID = tx.OID
+	}
+	if result.DeploymentName == "" {
+		result.DeploymentName = tx.Payload.DeploymentName
+	}
+	if result.ServiceTaskResult == "" {
+		result.ServiceTaskResult = tx.Payload.ServiceTaskResult
+	}
+	return result
 }

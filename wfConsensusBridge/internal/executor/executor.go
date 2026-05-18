@@ -46,6 +46,19 @@ func (e *Executor) PrepareTx(ctx context.Context, tx model.Tx, height int64) (mo
 }
 
 func (e *Executor) FinalizeTx(ctx context.Context, tx model.Tx) (model.WorkflowConsensus, error) {
+	result, err := e.ReplayTx(ctx, tx)
+	if err != nil {
+		return model.WorkflowConsensus{}, err
+	}
+	if e.autoFlush {
+		if err := e.FlushTx(ctx, tx); err != nil {
+			return model.WorkflowConsensus{}, err
+		}
+	}
+	return result, nil
+}
+
+func (e *Executor) ReplayTx(ctx context.Context, tx model.Tx) (model.WorkflowConsensus, error) {
 	if tx.Execution != nil && tx.Payload.ServiceTaskResult == "" {
 		tx.Payload.ServiceTaskResult = tx.Execution.Result.ServiceTaskResult
 	}
@@ -53,12 +66,14 @@ func (e *Executor) FinalizeTx(ctx context.Context, tx model.Tx) (model.WorkflowC
 	if err != nil {
 		return model.WorkflowConsensus{}, err
 	}
-	if e.autoFlush {
-		if err := e.flush(ctx, tx); err != nil {
-			return model.WorkflowConsensus{}, err
-		}
-	}
 	return result, nil
+}
+
+func (e *Executor) FlushTx(ctx context.Context, tx model.Tx) error {
+	if !e.autoFlush {
+		return nil
+	}
+	return e.flush(ctx, tx)
 }
 
 // 根据交易类型，把统一的共识交易tx翻译成对应的wfEngine HTTP请求并发送
@@ -81,6 +96,7 @@ func (e *Executor) execute(ctx context.Context, tx model.Tx, consensusPayload bo
 			"businessData":          tx.Payload.BusinessData,
 			"staticAllocationTable": defaultJSON(tx.Payload.StaticAllocation),
 			"consensusPayload":      consensusPayload,
+			"txId":                  tx.TxID,   			// wfConsensusBridge 调 wfEngine 时，把 txId 一起传过去。因为后面的服务要知道这次加锁属于哪一笔交易，后面 commit/rollback 的是哪一笔交易
 		}
 		if strings.TrimSpace(tx.Payload.ServiceTaskResult) != "" {
 			payload["serviceTaskResultJson"] = tx.Payload.ServiceTaskResult
@@ -93,6 +109,7 @@ func (e *Executor) execute(ctx context.Context, tx model.Tx, consensusPayload bo
 			"businessData":     tx.Payload.BusinessData,
 			"user":             tx.Payload.User,
 			"consensusPayload": consensusPayload,
+			"txId":             tx.TxID,   			// wfConsensusBridge 调 wfEngine 时，把 txId 一起传过去。因为后面的服务要知道这次加锁属于哪一笔交易，后面 commit/rollback 的是哪一笔交易
 		}
 		if strings.TrimSpace(tx.Payload.ServiceTaskResult) != "" {
 			payload["serviceTaskResultJson"] = tx.Payload.ServiceTaskResult

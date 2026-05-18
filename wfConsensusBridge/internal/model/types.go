@@ -57,13 +57,15 @@ type WorkflowConsensus struct {
 }
 
 type CommandRecord struct {
-	Tx              Tx                `json:"tx"`
-	ConsensusStatus string            `json:"consensusStatus"`
-	ExecutionStatus string            `json:"executionStatus"`
-	ResultHash      string            `json:"resultHash,omitempty"`
-	ResultBody      string            `json:"resultBody,omitempty"`
-	Result          WorkflowConsensus `json:"result,omitempty"`
-	ErrorMessage    string            `json:"errorMessage,omitempty"`
+	Tx                  Tx                `json:"tx"`
+	ConsensusStatus     string            `json:"consensusStatus"`
+	ExecutionStatus     string            `json:"executionStatus"`
+	ResultHash          string            `json:"resultHash,omitempty"`
+	ResultBody          string            `json:"resultBody,omitempty"`
+	PreparedResultHash  string            `json:"preparedResultHash,omitempty"`
+	FinalizedResultHash string            `json:"finalizedResultHash,omitempty"`
+	Result              WorkflowConsensus `json:"result,omitempty"`
+	ErrorMessage        string            `json:"errorMessage,omitempty"`
 }
 
 type AppState struct {

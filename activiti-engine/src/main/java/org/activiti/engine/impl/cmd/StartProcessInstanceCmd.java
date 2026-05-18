@@ -81,6 +81,9 @@ public class StartProcessInstanceCmd<T> implements Command<ProcessInstance>, Ser
       if (variables.containsKey("businessData")) {
         commandContext.setBusinessData(String.valueOf(variables.remove("businessData")));
       }
+      if (variables.containsKey("txId")) {
+        commandContext.setTxId(String.valueOf(variables.remove("txId")));
+      }
       if (variables.containsKey("serviceTaskResultJson")) {
         commandContext.setServiceTaskResults(jsonTransfer.jsonToServiceTaskRes(String.valueOf(variables.remove("serviceTaskResultJson"))));
       }

@@ -98,6 +98,8 @@ public class CommandContext {
     private String lastResponse;
     //private List<String> serviceResponses=new LinkedList<>();
     private String businessData;
+    // 新增字段，后面新增getTxId和setId方法
+    private String txId;
     private boolean isDeploy=false;
     private Stack<Boolean> isExecuteServiceTask=new Stack<>();
     private int monitorNumber;
@@ -192,6 +194,17 @@ public class CommandContext {
 
     public String getBusinessData() {
         return businessData;
+    }
+
+    public String getTxId() {
+        return txId;
+    }
+
+    public void setTxId(String txId) {
+        this.txId = txId;
+        if (txId != null) {
+            this.cachedOutput.put("txId", txId);
+        }
     }
 
 

@@ -108,9 +108,56 @@ func (a *Application) FinalizeBlock(ctx context.Context, req *abcitypes.RequestF
 			txResults = append(txResults, &abcitypes.ExecTxResult{Code: code, Log: log})
 			continue
 		}
-		result, err := a.exec.FinalizeTx(ctx, tx)
+		// 第一种情况：validator 重放失败，意思是重放失败，通知 rollback
+		result, err := a.exec.ReplayTx(ctx, tx)
 		if err != nil {
+			rollbackResult := model.WorkflowConsensus{}
+			if tx.Execution != nil {
+				rollbackResult = tx.Execution.Result
+			}
+			if rollbackErr := a.exec.RollbackServiceLocks(ctx, tx, rollbackResult, "failed"); rollbackErr != nil {
+				err = fmt.Errorf("%w; rollback service locks failed: %v", err, rollbackErr)
+			}
 			a.core.RecordFinalized(tx, false, model.WorkflowConsensus{}, err.Error())
+			txResults = append(txResults, &abcitypes.ExecTxResult{Code: 1, Log: err.Error()})
+			continue
+		}
+		// 第二种情况：proposer 结果和 validator 结果不一致，意思是发现 proposer 结果不可信，通知 rollback，并标记 mismatched
+		if ok, preparedHash, finalizedHash := a.core.ExecutionMatches(tx, result); !ok {
+			rollbackResult := result
+			if tx.Execution != nil {
+				rollbackResult = tx.Execution.Result
+			}
+			log := "proposer execution result mismatch"
+			if rollbackErr := a.exec.RollbackServiceLocks(ctx, tx, rollbackResult, "mismatched"); rollbackErr != nil {
+				log = fmt.Sprintf("%s; rollback service locks failed: %v", log, rollbackErr)
+			}
+			a.core.RecordMismatched(tx, result, preparedHash, finalizedHash)
+			txResults = append(txResults, &abcitypes.ExecTxResult{
+				Code: 1,
+				Log:  log,
+			})
+			continue
+		}
+		// 第三种情况：flush 失败，意思是wfEngine 状态正式推进失败，通知 rollback
+		if err := a.exec.FlushTx(ctx, tx); err != nil {
+			rollbackResult := result
+			if tx.Execution != nil {
+				rollbackResult = tx.Execution.Result
+			}
+			if rollbackErr := a.exec.RollbackServiceLocks(ctx, tx, rollbackResult, "failed"); rollbackErr != nil {
+				err = fmt.Errorf("%w; rollback service locks failed: %v", err, rollbackErr)
+			}
+			a.core.RecordFinalized(tx, false, result, err.Error())
+			txResults = append(txResults, &abcitypes.ExecTxResult{Code: 1, Log: err.Error()})
+			continue
+		}
+		// 第四种情况：全部成功，意思是交易成功，通知服务端 commit。
+		if err := a.exec.CommitServiceLocks(ctx, tx, result); err != nil {
+			if rollbackErr := a.exec.RollbackServiceLocks(ctx, tx, result, "failed"); rollbackErr != nil {
+				err = fmt.Errorf("%w; rollback service locks failed: %v", err, rollbackErr)
+			}
+			a.core.RecordFinalized(tx, false, result, err.Error())
 			txResults = append(txResults, &abcitypes.ExecTxResult{Code: 1, Log: err.Error()})
 			continue
 		}
@@ -126,7 +173,6 @@ func (a *Application) FinalizeBlock(ctx context.Context, req *abcitypes.RequestF
 func (a *Application) Commit(_ context.Context, _ *abcitypes.RequestCommit) (*abcitypes.ResponseCommit, error) {
 	return &abcitypes.ResponseCommit{}, nil
 }
-
 
 // /state .dump 全状态；/nacos/key 单 key 读；/nacos/prefix 前缀扫并返回有序 JSON 列表。三者都是 只读内存状态，不参与共识写入；写入发生在 FinalizeBlock → ApplyNacosTx 更新 NacosKV 之后，查询才能读到新数据。
 func (a *Application) Query(_ context.Context, req *abcitypes.RequestQuery) (*abcitypes.ResponseQuery, error) {

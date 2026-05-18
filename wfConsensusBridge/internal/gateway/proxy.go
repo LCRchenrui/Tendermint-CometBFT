@@ -31,7 +31,6 @@ func New(nc *nacos.Client, defaultGroup string, cli *http.Client) *Gateway {
 	}
 }
 
-
 // 网关的主流程编排函数，作用是把一次RunRequest完整变成选实例并发起调用，最后返回统一响应结构
 // wfEngine发来的请求里通常有s-serviceName、s-url、s-method，这里需要：
 // 1. 根据s-serviceName找到对应的Nacos实例
@@ -131,6 +130,20 @@ func (g *Gateway) doForward(ctx context.Context, target string, req RunRequest) 
 	}
 	for k, v := range headers {
 		httpReq.Header.Set(k, v)
+	}
+	// gateway 把 txId、oid、serviceTaskName 写进 HTTP Header，转发给真实服务，所以真实服务可以通过Header拿到X-WF-TxId: c-1001、X-WF-Oid: supply.bpmn@xxx和X-WF-ServiceTask: Calculate demand，真实服务就可以根据这些信息加锁、保存 pending 事务
+	if strings.TrimSpace(req.TxID) != "" {
+		httpReq.Header.Set("X-WF-TxId", strings.TrimSpace(req.TxID))
+	}
+	if strings.TrimSpace(req.ConsumerName) != "" {
+		httpReq.Header.Set("X-WF-ConsumerName", strings.TrimSpace(req.ConsumerName))
+		parts := strings.SplitN(strings.TrimSpace(req.ConsumerName), "@", 2)
+		if len(parts) > 0 && parts[0] != "" {
+			httpReq.Header.Set("X-WF-Oid", parts[0])
+		}
+		if len(parts) == 2 && parts[1] != "" {
+			httpReq.Header.Set("X-WF-ServiceTask", parts[1])
+		}
 	}
 	if httpReq.Header.Get("Content-Type") == "" {
 		httpReq.Header.Set("Content-Type", "application/json")

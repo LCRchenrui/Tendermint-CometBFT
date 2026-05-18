@@ -4,6 +4,9 @@ import "encoding/json"
 
 type RunRequest struct {
 	ConsumerName string `json:"s-consumerName"`
+	// 新增字段：txId，表示这次服务调用属于哪一笔交易，这是 Go gateway 对 wfEngine 请求体的解析结构。
+	// 如果wfEngine发来"s-txId": "c-1001"，会被解析到req.TxID
+	TxID         string `json:"s-txId"`
 	ServiceName  string `json:"s-serviceName"`
 	Group        string `json:"s-group"`
 	URL          string `json:"s-url"`
